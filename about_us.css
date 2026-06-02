@@ -1,0 +1,575 @@
+body {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --btn-bg: #333333;
+    --btn-text: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.1);
+    --nav-border: rgba(255, 255, 255, 0.25);
+    --nav-hover: rgba(255, 255, 255, 0.2);
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --btn-bg: #f0f0f0;
+    --btn-text: #121212;
+    --nav-bg: rgba(15, 15, 15, 0.4);
+    --nav-border: rgba(255, 255, 255, 0.08);
+    --nav-hover: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Logo (used in index.html) ── */
+.logo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ── Glass Navbar ── */
+.glass-navbar {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 32px;
+
+    position: fixed;
+    top: 45px;
+    left: 70%;
+    transform: translateX(-50%);
+
+    width: max-content;
+    min-width: 300px;
+    border-radius: 50px;
+
+    background: var(--nav-bg);
+    border: 1px solid var(--nav-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: background 0.3s, border 0.3s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-color);
+    background: var(--nav-hover);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Contact Page ── */
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.glass-card {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 20px;
+    background: rgba(30, 41, 59, 0);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(77, 132, 210, 0.2);
+    box-shadow: 0px 12px 40px 0 rgba(248, 149, 1, 0.653),
+        inset 0 0 120px rgba(79, 70, 229, 0.08),
+        inset 0px 0px 4px 2px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.Logo_contact {
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    margin: 0 0 25px 0;
+}
+
+.user-name {
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.card-body {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-body li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-body li i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: rgb(255, 123, 0);
+    flex-shrink: 0;
+}
+
+.follow i {
+    color: rgb(0, 0, 0);
+    padding: 10px 5px 0 0;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.follow i:hover {
+    color: rgb(255, 149, 0);
+    transform: scale(1.2);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* ── Expanded About Us Custom Styles ── */
+
+.about-lead {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#categories, #contact-shortcut {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#categories h2, #contact-shortcut h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Category Grid Structure */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Category Cards styling */
+.category-card {
+    background: var(--bg-color);
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--nav-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .category-card {
+    background: #1e1e1e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(248, 149, 1, 0.2);
+}
+
+/* Placeholder for actual car images */
+.card-image-placeholder {
+    width: 100%;
+    height: 160px;
+    background: rgba(248, 149, 1, 0.1);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-image-placeholder i {
+    font-size: 48px;
+    color: rgb(255, 123, 0);
+}
+
+.category-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.category-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+body.dark-mode .category-card p {
+    color: #b0b0b0;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+/* ════════════════════════════════
+   LIQUID GLASS DARK MODE SWITCH
+   Uses :has() — works in all
+   modern browsers (2023+)
+   ════════════════════════════════ */
+
+/* Hide the actual checkbox */
+.dark-toggle-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* Switch sits in the header */
+.glass-switch {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* The pill track */
+.switch-track {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    background: rgba(180, 180, 180, 0.25);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+    transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+}
+
+/* Shimmer highlight on top of track */
+.switch-track::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.75), transparent);
+    border-radius: 100px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* The sliding thumb */
+.switch-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ffffff, #e8e8e8);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+    z-index: 2;
+}
+
+/* Icons inside thumb */
+.icon-sun,
+.icon-moon {
+    position: absolute;
+    font-size: 13px;
+    line-height: 1;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.icon-sun  { opacity: 1; transform: scale(1) rotate(0deg); }
+.icon-moon { opacity: 0; transform: scale(0.4) rotate(-30deg); }
+
+
+/* ── DARK MODE: triggered by :has() ── */
+
+/* Move thumb */
+html:has(#dark-toggle:checked), html.dark-mode .switch-thumb {
+    transform: translateX(30px);
+    background: linear-gradient(145deg, #3a3a5c, #1e1e38);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Darken track */
+html:has(#dark-toggle:checked), html.dark-mode .switch-track {
+    background: rgba(15, 15, 30, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Swap icons */
+html:has(#dark-toggle:checked), html.dark-mode .icon-sun  { opacity: 0; transform: scale(0.4) rotate(30deg); }
+html:has(#dark-toggle:checked), html.dark-mode .icon-moon { opacity: 1; transform: scale(1) rotate(0deg); }
+
+/* ── Apply dark variables to entire page ── */
+html:has(#dark-toggle:checked), html.dark-mode body {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --btn-bg: #f0f0f0;
+    --btn-text: #121212;
+    --nav-bg: rgba(15, 15, 15, 0.4);
+    --nav-border: rgba(255, 255, 255, 0.08);
+    --nav-hover: rgba(255, 255, 255, 0.1);
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Product cards dark */
+html:has(#dark-toggle:checked), html.dark-mode .product {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 0 8px 1px rgba(255,255,255,0.05);
+}
+html:has(#dark-toggle:checked), html.dark-mode .product:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Category cards dark (about page) */
+html:has(#dark-toggle:checked), html.dark-mode .category-card {
+    background: #1e1e1e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+html:has(#dark-toggle:checked), html.dark-mode .category-card p {
+    color: #b0b0b0;
+}
+
+/* Footer icons dark */
+html:has(#dark-toggle:checked), html.dark-mode footer .follow i {
+    color: #f0f0f0;
+}
+
+/* Card content text (contact page) */
+html:has(#dark-toggle:checked), html.dark-mode .card-content {
+    color: #f0f0f0;
+}
+html:has(#dark-toggle:checked), html.dark-mode .follow i {
+    color: #f0f0f0;
+}
+
+/* ════════════════════════════════
+   MOBILE NAV (hamburger)
+   ════════════════════════════════ */
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--nav-border);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2001;
+    flex-shrink: 0;
+    transition: background 0.3s, border 0.3s;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text-color);
+    border-radius: 2px;
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease, width 0.25s ease;
+    transform-origin: center;
+}
+
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; width: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    /* NO backdrop-filter — it blurs everything including the menu */
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1049;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+}
+.nav-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-overlay {
+        display: none;
+    }
+
+    /* Override desktop fixed-center positioning */
+    .glass-navbar {
+        left: auto !important;
+        transform: none !important;
+        top: 0 !important;
+        right: -100%;
+        position: fixed;
+        width: 78vw;
+        max-width: 300px;
+        min-width: unset !important;
+        height: 100dvh;
+        border-radius: 0 !important;
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+        border-left: 1px solid rgba(255,255,255,0.15);
+        padding: 90px 28px 40px 28px !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        /* SOLID background so panel is not see-through */
+        background: #ffffff !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        z-index: 2000;
+        box-shadow: -8px 0 40px rgba(0,0,0,0.25);
+    }
+
+    .glass-navbar.open {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 4px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px 20px;
+        font-size: 17px;
+        border-radius: 14px;
+        width: 100%;
+    }
+
+    #header, section#header {
+        padding: 14px 18px !important;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Dark mode: solid dark panel on mobile */
+@media (max-width: 768px) {
+    html:has(#dark-toggle:checked) .glass-navbar,
+    html.dark-mode .glass-navbar {
+        background: #1a1a1a !important;
+        border-left-color: rgba(255,255,255,0.1) !important;
+    }
+}
+
+
+/* Ensure nav links are always clickable on mobile */
+@media (max-width: 768px) {
+    .glass-navbar .nav-links,
+    .glass-navbar .nav-links li,
+    .glass-navbar .nav-links a {
+        position: relative;
+        z-index: 2100;
+        pointer-events: all;
+    }
+}

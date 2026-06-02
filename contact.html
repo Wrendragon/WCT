@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welove Diecast</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <section id="header">
+        <nav class="glass-navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a class="active" href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div style="display:flex;align-items:center;gap:12px;">
+            <input type="checkbox" id="dark-toggle" class="dark-toggle-input">
+            <label for="dark-toggle" class="glass-switch" title="Toggle dark mode">
+                <span class="switch-track">
+                    <span class="switch-thumb">
+                        <span class="icon-sun">☀️</span>
+                        <span class="icon-moon">🌙</span>
+                    </span>
+                </span>
+            </label>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </section>
+    <div class="nav-overlay"></div>
+
+    <article>
+        <div class="glass-card" data-aos="flip-left">
+            <div class="card-content">
+                <div class="user-details">
+                    <img class="Logo_contact" src="image/Logo.jpg" alt="Welove Diecast Logo">
+                    <p class="user-name">Welove Diecast Contact</p>
+                    <p>If you have any questions or inquiries, feel free to reach out to us:</p>
+                    <div class="follow">
+                        <a href="https://www.facebook.com/profile.php?id=100094763005230"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/diecastwelove/?utm_source=qr#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@diecastwelove?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://t.me/diecastwelove"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fa-solid fa-map"></i><p>Cambodia, Phnom Penh</p></li>
+                        <li><i class="fa-solid fa-phone"></i><p>+855 934 439 94</p></li>
+                        <li><i class="fa-solid fa-envelope"></i><p>dicastwelove@gmail.com</p></li>
+                        <li><i class="fa-brands fa-telegram"></i><p>t.me/diecastwelove</p></li>
+                        <li><i class="fa-solid fa-clock"></i><p>Mon - Sun: 7:00 AM - 8:00 PM</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: false,
+        });
+    </script>
+    <script src="darkmode.js"></script>
+</body>
+
+</html>
